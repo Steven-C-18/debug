@@ -1,0 +1,10 @@
+imports:
+    - { resource: debug.yml }
+
+services:
+    steve.debug.listener:
+        class: steve\debug\event\main_listener
+        arguments:
+            - '@auth'
+        tags:
+            - { name: event.listener }
